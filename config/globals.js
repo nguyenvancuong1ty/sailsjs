@@ -20,6 +20,8 @@ module.exports.globals = {
 
   _: require('@sailshq/lodash'),
 
+  secret_key: "config-token" ,
+
   /****************************************************************************
   *                                                                           *
   * This app was generated without a dependency on the "async" NPM package.   *

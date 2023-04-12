@@ -25,11 +25,38 @@ module.exports.routes = {
 
   'GET /api/v1/users' :  { controller: 'Users', action: 'find' },
 
+  'POST /api/v1/send-email' :  { controller: 'Users', action: 'sendEmail' },
+
+  'GET /api/v1/users/:page/:limit' :  { controller: 'Users', action: 'pagination' },
+
+
   'POST /api/v1/users' :  { controller: 'Users', action: 'store' },
 
   'PUT /api/v1/users/:id' :  { controller: 'Users', action: 'update' },
 
   'DELETE /api/v1/users/:id' :  { controller: 'Users', action: 'delete'},
+
+  'DELETE /api/v1/users' :  { controller: 'Users', action: 'deleteMulti'},
+
+  'POST /api/v1/vote' :  { controller: 'Vote', action: 'vote' },
+
+  'POST /api/v1/vote/delete' :  { controller: 'Vote', action: 'delete' },
+
+
+  'POST /api/v1/login' :  { controller: 'Users', action: 'login' },
+
+  'GET /api/v1/users/:username' :  { controller: 'Users', action: 'findByName' },
+
+  'GET /api/v1/voucher' :  { controller: 'voucher', action: 'find' },
+
+
+
+  '/v1/api-docs': {
+		view: 'swagger',
+		locals: {
+			layout: false
+		}
+	}, 
 
 
 
