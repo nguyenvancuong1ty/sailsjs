@@ -32,15 +32,21 @@ module.exports.routes = {
 
   'POST /api/v1/users' :  { controller: 'Users', action: 'store' },
 
+  'POST /api/v1/users/actions2' :  { action: 'user/create' },
+
+
   'PUT /api/v1/users/:id' :  { controller: 'Users', action: 'update' },
 
   'DELETE /api/v1/users/:id' :  { controller: 'Users', action: 'delete'},
+
+  'DELETE /api/v1/users/at2/:id' :  { action: 'user/delete'},
+
 
   'DELETE /api/v1/users' :  { controller: 'Users', action: 'deleteMulti'},
 
   'POST /api/v1/vote' :  { controller: 'Vote', action: 'vote' },
 
-  'POST /api/v1/vote/delete' :  { controller: 'Vote', action: 'delete' },
+  'DELETE /api/v1/vote' :  { controller: 'Vote', action: 'delete' },
 
 
   'POST /api/v1/login' :  { controller: 'Users', action: 'login' },

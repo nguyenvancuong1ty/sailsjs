@@ -1,6 +1,3 @@
-const jwt = require('jsonwebtoken');
-const secret_key = "config-token";
-
 module.exports = {
     getIdLogin(req){
         let bearerToken;
@@ -13,7 +10,7 @@ module.exports = {
             console.log('error...');
         }
         if(req.token !== 'null') {
-            const decodedHeader =  jwt.verify(req.token, secret_key);
+            const decodedHeader =  sails.config.globals.jwt_config.verify(req.token, sails.config.globals.secret_key);
             return decodedHeader.id;
         }
         return false;

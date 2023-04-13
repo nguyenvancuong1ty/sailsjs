@@ -11,7 +11,6 @@ const secret_key = "config-token";
 const md5 = require('md5');
 const { getIdLogin } = require('../getIdLogin');
 
-
 module.exports = {
    
   /**

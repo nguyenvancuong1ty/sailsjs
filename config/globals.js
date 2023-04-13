@@ -8,6 +8,7 @@
  * For more information on any of these options, check out:
  * https://sailsjs.com/config/globals
  */
+const jwt = require('jsonwebtoken');
 
 module.exports.globals = {
 
@@ -22,6 +23,7 @@ module.exports.globals = {
 
   secret_key: "config-token" ,
 
+  jwt_config : jwt,
   /****************************************************************************
   *                                                                           *
   * This app was generated without a dependency on the "async" NPM package.   *
